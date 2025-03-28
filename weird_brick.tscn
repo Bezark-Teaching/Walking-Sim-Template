@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqlht27c24j1a"]
+
+[ext_resource type="Texture2D" uid="uid://b1sel0hc2q25c" path="res://Assets/512x512/Brick/Brick_02-512x512.png" id="1_jwp37"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ud8tt"]
+albedo_texture = ExtResource("1_jwp37")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+texture_filter = 0
+
+[node name="WeirdBrick" type="CSGBox3D"]
+size = Vector3(3.79968, 1, 10.6807)
+material = SubResource("StandardMaterial3D_ud8tt")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+operation = 2
+radius = 0.963
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.35931)
+operation = 2
+radius = 0.963
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.7558)
+operation = 2
+radius = 0.963
